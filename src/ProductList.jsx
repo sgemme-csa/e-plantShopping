@@ -251,7 +251,18 @@ function ProductList() {
         </div>
 
         <div className="product-grid">
-
+            {plantsArray.forEach((value) => {
+                console.log(value);
+                console.log(value.category);
+                <div className='plant_heading'>{value.category}</div>                    
+                value.plants.forEach((plant) => {
+                    <div className="product-card">
+                        <p><strong>name:</strong> {plant.name}</p>
+                        <p><strong>price:</strong> ${plant.cost}</p>
+                        <p><img src={plant.image}/></p>
+                    </div>
+                });
+            })} 
 
         </div>
 
